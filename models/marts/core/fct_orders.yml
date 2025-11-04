@@ -14,7 +14,9 @@ models:
       - name: amount
         tests:
           - not_null
-          - greater_than_five
+          - greater_than_five:
+              config:
+                store_failures: true
           - average_dollars_spent_greater_than_one:
               group_by_column: customer_id
           - dbt_expectations.expect_column_values_to_be_between:
