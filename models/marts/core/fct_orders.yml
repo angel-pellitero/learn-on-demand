@@ -17,3 +17,7 @@ models:
           - greater_than_five
           - average_dollars_spent_greater_than_one:
               group_by_column: customer_id
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  
+              max_value: 100
+              strictly: false 

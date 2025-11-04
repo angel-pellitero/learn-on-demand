@@ -37,4 +37,4 @@ models:
       +materialized: view
     marts:
       +materialized: table
-    +required_tests: {"unique.*|not_null": 2}
+    +required_tests: {"unique.*|not_null|dbt.utils.cardinality_equality": 2}
